@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scelet</title>
+  <link rel="stylesheet" href="/style/style.css">
+  {{!-- <script defer src="/js/client.js"></script>
+  <script defer src="/js/profilParty.js"></script> --}}
+</head>
+
+<body>
+
+  <div class="header">
+<a href="/" class="logo">Главная</a>
+    <div class="header-right">
+      {{#if username}}
+      <a id="profilParty" href="/profilParty" class="logo">{{username}}</a>
+      <a href="/user/logout">Выйти</a>
+      {{else}}
+      <a href="/user/registration">Регистрация</a>
+      <a href="/user/login">Войти</a>
+      {{/if}}
+    </div>
+  </div>
+  {{{body}}}
+</body>
+
+</html>
